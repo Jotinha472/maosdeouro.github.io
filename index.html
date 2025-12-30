@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mãos de Ouro - Serviço de Limpeza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="img/logo.png" alt="Mãos de Ouro Limpeza">
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#agendar" class="btn-nav">Agendar</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h2>Cuidado e confiança no seu lar</h2>
+    <p>
+      Limpeza profissional feita por mulheres que cuidam da sua casa
+      como se fosse delas.
+    </p>
+
+    <a href="#agendar" class="btn-principal">Agendar Limpeza</a>
+  </div>
+</section>
+
+
+<!-- SOBRE -->
+<section id="sobre" class="section">
+  <div class="container sobre-grid">
+
+    <div class="sobre-texto">
+      <h2>Sobre Nós</h2>
+      <p>
+        Somos uma empresa de limpeza domiciliar formada exclusivamente por mulheres.
+        Nosso trabalho é baseado em cuidado, organização, respeito e confiança,
+        oferecendo um serviço humano, delicado e profissional.
+      </p>
+    </div>
+
+    <div class="sobre-imagem">
+      <img src="https://images.unsplash.com/photo-1598300056393-4aac492f4344" alt="Ambiente limpo">
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="section bg-light">
+  <div class="container">
+    <h2>Nossos Serviços</h2>
+
+    <div class="cards">
+      <div class="card">Limpeza Residencial</div>
+      <div class="card">Limpeza Pós-Obra</div>
+      <div class="card">Limpeza Comercial</div>
+    </div>
+  </div>
+</section>
+
+<section id="antes-depois" class="section bg-light">
+  <div class="container">
+    <h2>Antes e Depois</h2>
+
+    <div class="antes-depois-grid">
+
+      <div class="antes-depois-card">
+        <div class="foto">
+          <img src="img/Antes 1.jpeg" alt="Antes da limpeza">
+          <span class="tag antes">Antes</span>
+        </div>
+        <div class="foto">
+          <img src="img/Depois 1.jpeg" alt="Depois da limpeza">
+          <span class="tag depois">Depois</span>
+        </div>
+      </div>
+
+      <div class="antes-depois-card">
+        <div class="foto">
+          <img src="img/Antes 2.jpeg" alt="Antes da limpeza">
+          <span class="tag antes">Antes</span>
+        </div>
+        <div class="foto">
+          <img src="img/Depois 2.jpeg" alt="Depois da limpeza">
+          <span class="tag depois">Depois</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AGENDAMENTO -->
+<section id="agendar" class="section">
+  <div class="container">
+    <h2>Agendar Limpeza</h2>
+
+    <form id="form-agendamento">
+
+      <input type="text" id="nome" placeholder="Seu nome completo" required>
+
+      <input 
+        type="tel" 
+        id="whats" 
+        placeholder="WhatsApp (DDD + número)" 
+        required
+      >
+
+      <select id="servico" required>
+        <option value="">Selecione o serviço</option>
+        <option value="Limpeza Residencial">Limpeza Residencial</option>
+        <option value="Faxina Completa">Faxina Completa</option>
+        <option value="Pós-Obra">Limpeza Pós-Obra</option>
+      </select>
+
+      <div class="linha">
+        <input type="date" id="data" required onchange="verificarHorario()">
+
+        <select id="hora" required onchange="verificarHorario()">
+          <option value="">Horário</option>
+          <option value="08:00">08:00</option>
+          <option value="13:00">13:00</option>
+        </select>
+      </div>
+
+      <small id="statusData"></small>
+
+      <p id="statusData"></p>
+
+      <input 
+        type="text" 
+        id="endereco" 
+        placeholder="Endereço completo (rua, número, bairro)" 
+        required
+      >
+
+      <button type="submit">
+        Confirmar Agendamento
+      </button>
+
+
+    </form>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Delicatta Limpeza • Feito com cuidado</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
